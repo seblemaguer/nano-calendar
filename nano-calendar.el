@@ -848,7 +848,8 @@ for efficiency."
   
   (setq header-line-format nil)
   (let ((inhibit-message t))
-    (stripes-mode 0)
+    (when (fbound 'stripes-mode)
+      (stripes-mode 0))
     (hl-line-mode 0)))
 
 (defun nano-calendar--minibuffer-setup ()
