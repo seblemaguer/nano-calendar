@@ -848,7 +848,7 @@ for efficiency."
   
   (setq header-line-format nil)
   (let ((inhibit-message t))
-    (when (fbound 'stripes-mode)
+    (when (fboundp 'stripes-mode)
       (stripes-mode 0))
     (hl-line-mode 0)))
 
